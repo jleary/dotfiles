@@ -1,1 +1,5 @@
-/home/jleary/.aliases
+alias j="jobs"
+alias pd="pushd"
+alias cls="clear"
+alias svim="sudo vim"
+alias shoot='sudo $(fc -ln -1)'
