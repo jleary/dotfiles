@@ -2,7 +2,8 @@ execute pathogen#infect()
 syntax on
 colorscheme apprentice
 set nu
-set clipboard^=unnamed,unnamedplus "Or'd for cross-platform support
+set clipboard^=unnamed,unnamedplus
+"set clipboard=unnamedplus
 set mouse=a
 set spell
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
@@ -15,6 +16,9 @@ let g:lightline.active = {
     \ 'right': [ [ 'lineinfo' ],
     \            [ 'percent'  ],
     \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
+let g:lightline.component_function = {
+    \ 'gitbranch': 'gitbranch#name'
+    \}
 let g:lightline.inactive = {
     \ 'left':  [ [ 'filename' ] ],
     \ 'right': [ [ 'lineinfo' ],
@@ -22,10 +26,11 @@ let g:lightline.inactive = {
 let g:lightline.tabline = {
     \ 'left':  [ [ 'tabs'  ] ],
     \ 'right': [ [ 'close' ] ] }
+
 set laststatus=2
 set noshowmode
 set showtabline=2
-set relativenumber
+"set relativenumber
 set cursorline
 set cursorcolumn
 set showcmd
