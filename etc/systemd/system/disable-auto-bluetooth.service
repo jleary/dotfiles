@@ -1,0 +1,10 @@
+[Unit]
+Description=RfKills bluetooth on start
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/rfkill block bluetooth
+RemainAfterExit=True
+
+[Install]
+WantedBy=default.target
