@@ -46,3 +46,5 @@ set undodir=~/.vim/_undo/
 :command Q q
 :command QA qa
 :command Qa qa
+"Stolen From: https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
+:command FW w !sudo tee % > /dev/null
